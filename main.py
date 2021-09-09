@@ -11,9 +11,11 @@ cfgFile.close()
 # Start Database ORM
 dbcfg = Dbconfig(configs=configs['dbconfigs'])
 db = dbcfg.startDB()
+
+# Set Entities on Database
 from application.models import *
+db.create_all()
         
 # Run App
 if __name__ == "__main__":
-    db.create_all()
     app.run(debug=True)
