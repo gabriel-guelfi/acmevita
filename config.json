@@ -1,0 +1,9 @@
+{
+    "dbconfigs": {
+        "dbhost": "localhost",
+        "dbname": "acmevita",
+        "dbuser": "acmevita",
+        "dbpass": "Senha123#",
+        "dbport": 3306
+    }
+}
