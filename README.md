@@ -69,12 +69,12 @@ Here's an example:
         "dbhost": "localhost",
         "dbname": "acmevita",
         "dbuser": "acmevita",
-        "dbpass": "Pass123#",
+        "dbpass": "Senha123#",
         "dbport": 3306
     }
 }
 ```
-Just change it to fulfill your database setup.
+Just change "dbconfigs" to fulfill your database setup.
 
 ---
 
@@ -97,6 +97,6 @@ python main.py
 Done and done! Now you can access its API's endpoints to see data at "localhost:5000". The **documentation and reference guide** about the API is 
 documented on this [Postman Link](https://documenter.getpostman.com/view/17465061/U16kq4zE)
 
-***OBS: The application will populate its database automatically with dummy data on start up***
+***OBS: You can populate database automatically with dummy data accessing endpoint "/populate". See **documentation and reference guide** for further info***
 
 ---

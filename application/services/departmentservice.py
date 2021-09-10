@@ -26,7 +26,7 @@ class DepartmentService:
         return result
 
     # Method that create a new department register
-    def createDepartment(data):
+    def createDepartment(name):
         """
 
         This method creates a new instance of a department, passing name
@@ -35,8 +35,8 @@ class DepartmentService:
 
         """
 
-        department = Dependent(name=data['name'])
-        db.session.add(Dependent)
+        department = Department(name=name)
+        db.session.add(department)
         db.session.commit()
         db.session.refresh(department)
 

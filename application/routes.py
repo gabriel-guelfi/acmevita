@@ -2,8 +2,6 @@ from engine.app import app
 from flask import jsonify
 
 # Route for listing departments:
-
-
 @app.route("/department")
 def listDepartments():
     """
@@ -19,8 +17,6 @@ def listDepartments():
     return jsonify(service.listDepartments())
 
 # Route for listing employees within departments:
-
-
 @app.route("/department-employees/<int:departmentId>")
 def departmentEmployees(departmentId):
     """
@@ -37,8 +33,6 @@ def departmentEmployees(departmentId):
     return jsonify(service.listEmployees(departmentId=departmentId))
 
 # Route for listing employee's dependents:
-
-
 @app.route("/employee-dependents/<int:employeeId>")
 def employeeDependents(employeeId):
     """
@@ -53,3 +47,17 @@ def employeeDependents(employeeId):
     service = DependentService
 
     return jsonify(service.listDependents(employeeId=employeeId))
+
+# Route for populating database
+@app.route("/populate", methods=['POST'])
+def populateDB():
+    """
+
+    This function uses the service DummyDataGenerator
+    to populate database with randomized dummy data
+
+    """
+    from .services.dummydataservice import DummyDataGenerator
+    dmg = DummyDataGenerator()
+
+    return dmg.exec()
