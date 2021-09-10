@@ -6,7 +6,7 @@ It is written in Python using framework Flask, the ORM SQL Alchemy and a MySQL d
 
 For more information about the test itself, follow this [link](https://gitlab.com/telavita/projeto-backend/-/tree/master)
 
-If you looking for the API's **documentation and reference guide**, follow this [Postman Link](https://documenter.getpostman.com/view/17465061/U16kq4zE)
+If you're looking for the API's **documentation and reference guide**, follow this [Postman Link](https://documenter.getpostman.com/view/17465061/U16kq4zE)
 
 ---
 
