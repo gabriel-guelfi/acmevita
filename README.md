@@ -77,17 +77,17 @@ Just change it to fulfill your database setup.
 ---
 
 ## Running the Application
-From a terminal, navigate to application's root folder:
+1. From a terminal, navigate to application's root folder:
 ```shell
-cd /foo/bar/acmevite
+cd /foo/bar/acmevita
 ```
 
-Activate the Python Virtual Environment:
+2. Activate the Python Virtual Environment:
 ```shell
 source venv/bin/activate
 ```
 
-Run The application itself:
+3. Run The application itself:
 ```shell
 python main.py
 ```
