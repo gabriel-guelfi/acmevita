@@ -77,7 +77,7 @@ Just change it to fulfill your database setup.
 ---
 
 ## Running the Application
-1. From a terminal, navigate to application's root folder:
+1. From a terminal, navigate to the application's root folder:
 ```shell
 cd /foo/bar/acmevita
 ```
@@ -87,7 +87,7 @@ cd /foo/bar/acmevita
 source venv/bin/activate
 ```
 
-3. Run The application itself:
+3. Run the application itself:
 ```shell
 python main.py
 ```
