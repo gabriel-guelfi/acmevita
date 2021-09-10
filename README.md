@@ -1,6 +1,6 @@
 ## Introduction
 
-This is an application for the test proposed by [Telavita](https://www.telavita.com.br/) for a job opportunity as a Senior Back end developer.
+This is an application for the test proposed by [Telavita](https://www.telavita.com.br/) for a job opportunity as a Senior Back-end developer.
 
 It is written in Python using framework Flask, the ORM SQL Alchemy and a MySQL database server.
 
@@ -76,5 +76,25 @@ Just change it to fulfill your database setup.
 
 ---
 
-## Reference
-https://documenter.getpostman.com/view/17465061/U16kq4zE
+## Running the Application
+From a terminal, navigate to application's root folder:
+```shell
+cd /foo/bar/acmevite
+```
+
+Activate the Python Virtual Environment:
+```shell
+source venv/bin/activate
+```
+
+Run The application itself:
+```shell
+python main.py
+```
+
+Done and done! Now you can access its API's endpoints to see data at "localhost:5000". The **documentation and reference guide** about the API is 
+documented on this [Postman Link](https://documenter.getpostman.com/view/17465061/U16kq4zE)
+
+***OBS: The application will populate its database automatically with dummy data on start up***
+
+---
