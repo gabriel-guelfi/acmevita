@@ -1,5 +1,6 @@
 /__pycache__
 /application/__pycache__
 /application/services/__pycache__
-/engine/__pycache__
+/core/__pycache__
 /venv
+/test

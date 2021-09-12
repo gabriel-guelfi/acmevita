@@ -28,7 +28,7 @@ If you're looking for the API's **documentation and reference guide**, follow th
 ## Installation Steps
 
 1. Download the project on your computer and unzip it under some folder. (Ex.: */foo/bar/acmevita*)
-2. Open up your terminal and navigate to this folder:
+2. Open up your terminal and navigate to its folder:
 ```shell
 cd /foo/bar/acmevita
 ```

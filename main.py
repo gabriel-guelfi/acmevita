@@ -1,6 +1,6 @@
 import json
-from engine.app import app
-from engine.dbconfig import Dbconfig
+from core.app import app
+from core.dbconfig import Dbconfig
 import application.routes
 
 # Reads and sets configurations:

@@ -1,5 +1,5 @@
 from main import db
-from ..models import Department, Dependent
+from ..models import Department
 
 # Service class for department operations
 # This service provide the following operations:

@@ -1,4 +1,4 @@
-from engine.app import app
+from core.app import app
 from flask import jsonify
 
 # Route for listing departments:

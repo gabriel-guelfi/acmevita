@@ -14,7 +14,7 @@ class Dbconfig:
         """
 
         self.__configs = configs
-
+        
     # Getter for Database Configs
     @property
     def configs(self):
