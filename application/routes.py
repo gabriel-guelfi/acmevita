@@ -7,14 +7,12 @@ def listDepartments():
     """
 
     This function retrieves a list of departments from 
-    Department Service, then returns this list jsonified
+    Department Service, then returns this list serialized.
 
     """
 
     from .services.departmentservice import DepartmentService
-    service = DepartmentService
-
-    return jsonify(service.listDepartments())
+    return jsonify(DepartmentService.listDepartments())
 
 # Route for listing employees within departments:
 @app.route("/department-employees/<int:departmentId>")
@@ -23,14 +21,12 @@ def departmentEmployees(departmentId):
 
     This function retrieves a list of employees, based
     on passed Department's ID from Employee Service, 
-    then returns this list jsonified
+    then returns this list serialized.
 
     """
 
     from .services.employeeservice import EmployeeService
-    service = EmployeeService()
-
-    return jsonify(service.listEmployees(departmentId=departmentId))
+    return jsonify(EmployeeService().listEmployees(departmentId=departmentId))
 
 # Route for listing employee's dependents:
 @app.route("/employee-dependents/<int:employeeId>")
@@ -39,14 +35,12 @@ def employeeDependents(employeeId):
 
     This function retrieves a list of dependents, based
     on passed Employee's ID from Dependent Service, 
-    then returns this list jsonified
+    then returns this list serialized.
 
     """
 
     from .services.dependentservice import DependentService
-    service = DependentService
-
-    return jsonify(service.listDependents(employeeId=employeeId))
+    return jsonify(DependentService.listDependents(employeeId=employeeId))
 
 # Route for populating database
 @app.route("/populate", methods=['POST'])
@@ -58,6 +52,4 @@ def populateDB():
 
     """
     from .services.dummydataservice import DummyDataGenerator
-    dmg = DummyDataGenerator()
-
-    return dmg.exec()
+    return DummyDataGenerator().exec()

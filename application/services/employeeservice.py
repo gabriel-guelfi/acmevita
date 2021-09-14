@@ -1,5 +1,5 @@
 from main import db
-from ..models import Department, Employee, Dependent
+from ..models import Employee, Dependent
 
 # Service class for dependents operations
 # This service provide the following operations:
@@ -16,12 +16,7 @@ class EmployeeService:
         """
 
         result = []
-
-        dbData = db.session.query(Employee, Department)\
-        .join(Department)\
-        .filter(Department.id == departmentId).all()
-
-        for employee, department in dbData:
+        for employee, department in Employee.listEmployees(departmentId):
             result.append({
                 "employeeID": employee.id,
                 "employeeName": employee.firstName+" "+employee.lastName,

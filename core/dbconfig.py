@@ -1,9 +1,10 @@
 from .app import app
 from flask_sqlalchemy import SQLAlchemy
+from os import environ as env
 
 class Dbconfig:
     # Class Contructor
-    def __init__(self, configs):
+    def __init__(self):
         """
 
         This method set the options received on 
@@ -13,7 +14,12 @@ class Dbconfig:
 
         """
 
-        self.__configs = configs
+        self.__configs = {}
+        self.__configs['dbuser'] = env['DBUSER']
+        self.__configs['dbpass'] = env['DBPASS']
+        self.__configs['dbname'] = env['DBNAME']
+        self.__configs['dbhost'] = env.get("DBHOST", "localhost")
+        self.__configs['dbport'] = int(env.get("DBHOST", "3306"))
         
     # Getter for Database Configs
     @property

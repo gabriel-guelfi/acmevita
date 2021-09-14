@@ -8,17 +8,12 @@ class DepartmentService:
     # Method that list the departments:
     def listDepartments():
         """
-
-        This method retrieves a general list of departments from the ORM,
-        turns it into a JSON serializable dataset, then returns it.
-
+        Turns a list of Department objects into a serializable dataset, 
+        then returns it.
         """
 
         result = []
-
-        dbData = db.session.query(Department).all()
-
-        for department in dbData:
+        for department in Department.listDepartments():
             result.append({
                 "id": department.id,
                 "name": department.name
