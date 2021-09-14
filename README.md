@@ -58,23 +58,28 @@ pip install flask_sqlalchemy
 ---
 
 ## Configuration
-Under the root folder of the project(Ex.: */foo/bar/acmevita*) you will find a file named ***config.json***.
-This file contains all configs that you must do in order to run this **Acmevita Application**, such as
-Database settings and so on.
+Set environment variables that will tell the application how to connect to the database.
 
-Here's an example:
-```json
-{
-    "dbconfigs": {
-        "dbhost": "localhost",
-        "dbname": "acmevita",
-        "dbuser": "acmevita",
-        "dbpass": "Senha123#",
-        "dbport": 3306
-    }
-}
+- *Set Database username:*
+```shell
+export DBUSER="[your database username]"
 ```
-Just change "dbconfigs" to fulfill your database setup.
+- *Set Database password:*
+```shell
+export DBPASS="[your database user's password]"
+```
+- *Set Database name:*
+```shell
+export DBNAME="[your database name]"
+```
+- *Set Database host:**(not required. defaults to "localhost")*** 
+```shell
+export DBHOST="[your database host address]"
+```
+- *Set Database port:**(not required. defaults to "3306")*** 
+```shell
+export DBPORT="[your database port number]"
+```
 
 ---
 
